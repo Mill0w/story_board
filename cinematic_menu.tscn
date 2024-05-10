@@ -1,0 +1,330 @@
+[gd_scene load_steps=13 format=3 uid="uid://car3x2n163m74"]
+
+[ext_resource type="Script" path="res://Menu_Cinematic.gd" id="1_ics6s"]
+[ext_resource type="Texture2D" uid="uid://bxvfja54ygdav" path="res://images/5_Classroom_and_library_Black_Shadow_48x48.png" id="2_lcwi4"]
+[ext_resource type="Texture2D" uid="uid://b1pvycpoabara" path="res://images/Premade_Character_48x48_15.png" id="3_gys0v"]
+[ext_resource type="Script" path="res://images/Character.gd" id="4_82eme"]
+[ext_resource type="Texture2D" uid="uid://c7vpt36kcq7ma" path="res://images/emoji.png" id="5_3y203"]
+[ext_resource type="Texture2D" uid="uid://cmodwpdvtep4h" path="res://images/hand.png" id="6_re84q"]
+[ext_resource type="Texture2D" uid="uid://ce6ept6k1lg4s" path="res://images/butterfly.png" id="7_4at3a"]
+[ext_resource type="Texture2D" uid="uid://dwd6sx8eleiex" path="res://images/pole.png" id="8_hjpyt"]
+
+[sub_resource type="Animation" id="Animation_3cdx4"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect/Chair/Character:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.1, 0.3, 0.7, 1.1, 1.5, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [168, 169, 170, 171, 172, 173]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Transition/ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_1cbyi"]
+resource_name = "fade_out"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect/Chair/Character:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.1, 0.3, 0.7, 1.1, 1.5, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [168, 169, 170, 171, 172, 173]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Transition/ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Play:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Transition/ColorRect/Chair:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Transition/Worried:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.2, 2.5, 2.8, 3.1, 3.4, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [168, 169, 170, 171, 172, 173]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Transition/Worried:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2, 4.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Transition/Worried/Emoji:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.2, 2.5, 2.8, 3.1, 3.4, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [144, 145, 146, 147, 148, 149]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Transition/Hand:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(4.3, 7.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Transition/Hand/Wallet/Flies:frame_coords")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(4.5, 5.3, 6.1, 6.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Transition/Character2:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(8.1, 8.5, 8.9, 9.3, 9.7, 10.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [112, 113, 115, 114, 116, 117]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Transition/Character2:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(7.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_udvcc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/Character2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [111]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r21dw"]
+_data = {
+"RESET": SubResource("Animation_udvcc"),
+"fade_in": SubResource("Animation_3cdx4"),
+"fade_out": SubResource("Animation_1cbyi")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ics6s")
+
+[node name="Play" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.018
+anchor_bottom = 0.022
+offset_left = 1076.0
+offset_top = 403.0
+offset_right = 1231.0
+offset_bottom = 466.0
+theme_override_font_sizes/font_size = 40
+text = "Play"
+
+[node name="Exit" type="Button" parent="Play"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 78.0
+offset_right = 156.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r21dw")
+}
+speed_scale = 2.0
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.00999999)
+offset_left = -77.0
+offset_top = -219.0
+offset_right = 2372.0
+offset_bottom = 1222.0
+color = Color(0.305882, 0.305882, 0.305882, 1)
+
+[node name="Chair" type="Sprite2D" parent="Transition/ColorRect"]
+position = Vector2(504, 541.87)
+scale = Vector2(8.87599, 5.92352)
+texture = ExtResource("2_lcwi4")
+hframes = 8
+vframes = 15
+frame = 17
+
+[node name="Character" type="Sprite2D" parent="Transition/ColorRect/Chair"]
+position = Vector2(-12.473, -14.4132)
+scale = Vector2(0.594419, 0.679519)
+texture = ExtResource("3_gys0v")
+hframes = 56
+vframes = 16
+frame = 168
+script = ExtResource("4_82eme")
+
+[node name="Worried" type="Sprite2D" parent="Transition"]
+visible = false
+position = Vector2(1150, 656)
+scale = Vector2(9.25, 5.07185)
+texture = ExtResource("3_gys0v")
+hframes = 56
+vframes = 20
+frame = 173
+
+[node name="Emoji" type="Sprite2D" parent="Transition/Worried"]
+position = Vector2(23.7414, -52.9757)
+texture = ExtResource("5_3y203")
+hframes = 18
+vframes = 9
+frame = 149
+
+[node name="Hand" type="Sprite2D" parent="Transition"]
+visible = false
+position = Vector2(1166.75, 591.75)
+scale = Vector2(6.22657, 4.52273)
+texture = ExtResource("6_re84q")
+hframes = 9
+vframes = 5
+frame = 39
+
+[node name="Wallet" type="Sprite2D" parent="Transition/Hand"]
+position = Vector2(-71.6524, -109.082)
+scale = Vector2(0.601931, 0.393988)
+
+[node name="Flies" type="Sprite2D" parent="Transition/Hand/Wallet"]
+position = Vector2(116.703, 92.9334)
+scale = Vector2(2.60883, 3.8612)
+texture = ExtResource("7_4at3a")
+hframes = 4
+
+[node name="Character2" type="Sprite2D" parent="Transition"]
+visible = false
+position = Vector2(185.768, 217.737)
+scale = Vector2(5.71801, 3.8217)
+texture = ExtResource("3_gys0v")
+hframes = 55
+vframes = 20
+frame = 111
+
+[node name="Pole" type="Sprite2D" parent="Transition/Character2"]
+texture = ExtResource("8_hjpyt")
+hframes = 10
+frame = 9
+
+[node name="Paper" type="Sprite2D" parent="Transition/Character2/Pole"]
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Play/Exit" to="." method="_on_exit_pressed"]
+[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8vyx1qorpbd4"]
+
+[ext_resource type="PackedScene" uid="uid://b8vyx1qorpbd4" path="res://images/cutscene.tscn" id="1_cyrx3"]
+
+[node name="Node2D" instance=ExtResource("1_cyrx3")]
+
+[node name="Chair" parent="AnimationPlayer" index="0"]
+position = Vector2(423, 299)
